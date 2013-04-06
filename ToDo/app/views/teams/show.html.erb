@@ -1,0 +1,17 @@
+<h1><%= @team.name %></h1>
+<p>
+	<h2>Project List</h2>
+	<ul>
+		<% @team.projects.each do |project| %>
+		<li><%= link_to "#{project.title}", project_url(project) %></li>
+		<% end %>
+	</ul>
+	<%= link_to "Create Team Project", new_team_project_url(@team) %>
+	<br>
+	<h2>Members</h2>
+	<ul>
+		<% @team.users.each do |user| %>
+		<li><%= link_to "#{user.name}", user_url(user) %></li>
+		<% end %>
+	</ul>
+</p>

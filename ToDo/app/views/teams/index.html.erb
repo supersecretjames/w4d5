@@ -1,0 +1,9 @@
+<h1>Teams Index</h1>
+<p>
+	<ul>
+		<% @teams.each do |team| %>
+		<li><%= link_to "#{team.name}", team_url(team) %></li>
+		<% end %>
+	</ul>
+</p>
+<%= link_to "Create Team", new_team_url %>

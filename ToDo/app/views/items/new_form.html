@@ -1,0 +1,22 @@
+<form action="/items" method="post">
+
+<label for="title">Item Title:</label>
+<input type="text" name="item[title]">
+
+<label for="description">Description:</label>
+<textarea name="item[description]"></textarea>
+
+<label for="project_id">Assign to Project:</label>
+<select name="item[project_id]">
+	<option value ="1">Fancy Project</option>
+	<option value ="2">Another fancy project</option>
+</select>
+
+<label for="status">Incomplete</label>
+<input type="radio" name="item[status]" value="0">
+
+<label for="status">Complete</label>
+<input type="radio" name="item[status]" value="1">
+
+<input type="submit">
+

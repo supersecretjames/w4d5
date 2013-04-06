@@ -1,0 +1,9 @@
+<h1><%= @project.title %></h1>
+<p>
+	<h2>Team: <%= link_to "#{@project.team.name}", team_url(@project.team) %></h2>
+	<ul>
+		<% @project.items.each do |item| %>
+		<li><%= link_to "#{item.title}", item_url(item) %></li>
+		<% end %>
+	</ul>
+</p>

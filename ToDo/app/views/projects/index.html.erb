@@ -1,0 +1,9 @@
+<h1>Project Index</h1>
+<p>
+	<ul>
+		<% @projects.each do |project| %>
+		<li><%= link_to "#{project.title}", project_url(project) %></li>
+		<% end %>
+	</ul>
+</p>
+<%= link_to "Create Project", new_project_url %>

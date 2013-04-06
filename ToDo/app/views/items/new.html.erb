@@ -1,0 +1,20 @@
+<h1>Create Item</h1>
+<%= form_for(@item) do |f| %> 
+<%= f.label :title, "Item Title:" %>
+<%= f.text_field :title %>
+<br><br>
+<%= f.label :description, "Description:" %>
+<br>
+<%= f.text_area :description %>
+<br><br>
+<%= f.label :project_id, "Assign to Project:" %>
+<%= f.collection_select :project_id, Project.all, :id, :title %>
+<br><br>
+<%= f.label :status, "Incomplete", :value => 0 %>
+<%= f.radio_button :status, 0 %>
+<%= f.label :status, "Complete", :value => 1 %>
+<%= f.radio_button :status, 1 %>
+<br>
+<br>
+<%= f.submit %>
+<% end %>

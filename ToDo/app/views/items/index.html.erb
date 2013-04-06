@@ -1,0 +1,12 @@
+<h1>Item Index</h1>
+<p>
+	<h2><%= link_to "#{@project.title}", project_url(@project) %></h2>
+	<ul>
+		<% @items.each do |item| %>
+			<% if item.project.id == @project.id %>
+				<li><%= link_to "#{item.title}", item_url(item) %>
+			<% end %>
+		<% end %>
+	</ul>
+</p>
+<%= link_to "Create Item", new_item_url%>

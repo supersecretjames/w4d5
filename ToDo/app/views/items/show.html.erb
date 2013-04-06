@@ -1,0 +1,8 @@
+<h1>Item Details</h1>
+<p>
+	<ul>
+		<li><b>Title:</b> <%= @item.title %></li> 
+		<li><b>Description:</b> <%= @item.description %></li> 
+		<li><b>Parent Project:</b> <%= link_to "#{@item.project.title}", project_url(@item.project) %></li>
+	</ul>
+</p>
