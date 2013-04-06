@@ -24,4 +24,15 @@ class ItemsController < ApplicationController
 		@item = Item.find(params[:id])
 	end
 
+	def edit
+		@item = Item.find(params[:id])
+	end
+
+	def update
+		@item = Item.find(params[:id])
+    @item.update_attributes(params[:item])
+
+    redirect_to item_url(@item)
+	end
+
 end
